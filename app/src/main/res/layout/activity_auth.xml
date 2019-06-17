@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AuthActivity">
+
+    <Button
+        android:id="@+id/vk_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onLoginButtonClick"
+        android:layout_marginBottom="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp8"
+        android:layout_marginStart="@dimen/dp8"
+        android:text="@string/vk"
+        android:textColor="@color/white"
+        android:background="@color/colorVK"
+        app:layout_constraintBottom_toTopOf="@+id/fb_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+            android:id="@+id/fb_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp8"
+            android:layout_marginStart="@dimen/dp8"
+            android:onClick="onLoginButtonClick"
+            android:text="@string/facebook"
+            android:textColor="@color/white"
+            android:background="@color/colorFB"
+            app:layout_constraintBottom_toTopOf="@+id/google_button"
+            app:layout_constraintEnd_toEndOf="@+id/vk_button"
+            app:layout_constraintStart_toStartOf="@+id/vk_button"/>
+
+    <Button
+            android:id="@+id/google_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp8"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginBottom="@dimen/dp32"
+            android:onClick="onLoginButtonClick"
+            android:text="@string/google"
+            android:textColor="@color/white"
+            android:background="@color/colorGoogle"
+            app:layout_constraintEnd_toEndOf="@+id/vk_button"
+            app:layout_constraintStart_toStartOf="@+id/vk_button"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
